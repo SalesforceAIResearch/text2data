@@ -4,7 +4,7 @@ This is the official Repository of [Tex2Data (AAAI 2025)](https://arxiv.org/pdf/
 # Method overview
 Text2Data is a training framework for low-resource data generation. It can be seamlessly adapted to the training process of almost any generative models (see [Implementation instruction](#implementation-instruction)). 
 
-<img src="https://github.com/shi-yu-wang/Text2Data-private/blob/main/model.png" width="450" height="300">
+<img src="https://github.com/SalesforceAIResearch/text2data/blob/main/model.png" width="450" height="300">
 
 We initially utilize all data (blue module) in the dataset, and treat them as unlabelled data to pre-train the generative model to discern the overall data distribution while the optimal set of model parameters $$\Theta$$ is obtained. Then we finetune this generative model using only labelled data (e.g., data-text pairs, red module) to achieve desired model control. Crucially, we ensure that the parameters during finetuning using labelled data (i.e., $$\Theta'$$) remain in close proximity to those established during the initial training using unlabelled data (i.e., $$\Theta$$).
 
